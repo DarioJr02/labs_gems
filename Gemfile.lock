@@ -40,6 +40,10 @@ GEM
     rubocop-ast (1.50.0)
       parser (>= 3.3.7.2)
       prism (~> 1.7)
+    ruby-lsp (0.26.10)
+      language_server-protocol (~> 3.17.0)
+      prism (>= 1.2, < 2.0)
+      rbs (>= 3, < 5)
     ruby-progressbar (1.13.0)
     rubydex (0.2.9-aarch64-linux)
     rubydex (0.2.9-arm64-darwin)
@@ -86,9 +90,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  rubocop (~> 1.88)
+  rubocop
+  ruby-lsp (~> 0.26.10)
   sorbet
-  sorbet-static-and-runtime
+  sorbet-runtime
   tapioca (~> 0.19.2)
 
 CHECKSUMS
@@ -113,6 +118,7 @@ CHECKSUMS
   rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
   rubocop (1.88.2) sha256=8def251c90cd955feb4daa3edc0ab56893250c4ce90ef81e6c80c03f9a939bbf
   rubocop-ast (1.50.0) sha256=b9ca88300da0803ee222ad20cdb30494c0a784eed06fdc35d254b06d662788db
+  ruby-lsp (0.26.10) sha256=e67284af94423531f6b9a583350596421b5a6a4dd93083f1c2ba03da7c23bbed
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   rubydex (0.2.9-aarch64-linux) sha256=74391fd22c4b4ccca1b695d634daad13326e7cc81567e96549da17c5031265bb
   rubydex (0.2.9-arm64-darwin) sha256=1c014e3c244102739914d528202b1d0f54bdc3d1f85667b81b65ea22aabfa560
