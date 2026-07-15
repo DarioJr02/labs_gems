@@ -8,3 +8,5 @@ gem 'rubocop', '~> 1.88'
 gem 'sorbet'
 # gem 'sorbet-runtime'
 gem 'sorbet-static-and-runtime'
+
+gem "tapioca", "~> 0.19.2"
