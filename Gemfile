@@ -6,4 +6,5 @@ source 'https://rubygems.org'
 
 gem 'rubocop', '~> 1.88'
 gem 'sorbet'
-gem 'sorbet-runtime'
+# gem 'sorbet-runtime'
+gem 'sorbet-static-and-runtime'
