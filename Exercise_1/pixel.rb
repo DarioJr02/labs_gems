@@ -1,5 +1,5 @@
-# typed: true
 # frozen_string_literal: true
+# typed: true
 
 require 'sorbet-runtime'
 
@@ -9,8 +9,6 @@ require 'sorbet-runtime'
 # 1. What does mean magic comments in this context?
 
 class Pixel
-  attr_reader :z
-
   attr_accessor(:x, :y, :z)
 
   extend T::Sig
