@@ -26,14 +26,12 @@ class Shape
 
   sig { returns(T.nilable(String)) }
   def shape
-    return @nil if T.must(@name).empty? || @name != ' '
+    return nil if T.must(@name).strip.empty?
 
     return @name
   end
 end
 
-cube = Shape.new(3.4, 3.2, 3.4, 'Cube')
+cube = Shape.new(3.4, 3.2, 3.4, '    ')
 
-puts(cube.shape.class)
-
-puts(' Ruby language  '.strip)
+puts("My name is a #{cube.shape.class} type and its ==> #{cube.shape}")
