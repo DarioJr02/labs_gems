@@ -19,7 +19,7 @@ class Shape
     @x = x
     @y = y
     @z = z
-    @name = name
+    @name = name # Or T.must(name).strip ==> Hidde to the video.
   end
 
   # 3. public methods
@@ -32,6 +32,6 @@ class Shape
   end
 end
 
-cube = Shape.new(3.4, 3.2, 3.4, '    ')
+cube = Shape.new(3.4, 3.2, 3.4, ' d   ')
 
-puts("My name is a #{cube.shape.class} type and its ==> #{cube.shape}")
+puts("My name is a #{cube.shape.class} type, and its ==> #{cube.shape}.")
