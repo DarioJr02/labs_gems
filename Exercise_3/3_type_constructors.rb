@@ -6,18 +6,34 @@
 
 require 'sorbet-runtime'
 
-# Pixel class
-class Pixel
+# Shape class
+class Shape
   extend T::Sig
 
   # 1. Accesors.
-  attr_accessor(:x, :y, :z)
+  attr_accessor(:name, :x, :y, :z)
 
   # 2. Constructor.
-  sig { params(x: Float, y: Float, z: Float).void }
-  def initialize(x, y, z)
+  sig { params(x: Float, y: Float, z: Float, name: T.nilable(String)).void }
+  def initialize(x, y, z, name = nil)
     @x = x
     @y = y
     @z = z
+    @name = name
+  end
+
+  # 3. public methods
+
+  sig { returns(T.nilable(String)) }
+  def shape
+    return @nil if T.must(@name).empty? || @name != ' '
+
+    return @name
   end
 end
+
+cube = Shape.new(3.4, 3.2, 3.4, 'Cube')
+
+puts(cube.shape.class)
+
+puts(' Ruby language  '.strip)
