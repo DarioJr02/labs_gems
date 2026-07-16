@@ -7,7 +7,7 @@ require 'sorbet-runtime'
 # - Sorbet statick checker.
 
 # class Person
-class Person
+class Profession
   extend T::Sig
 
   attr_accessor(:name, :age, :id, :role)
@@ -40,8 +40,17 @@ class Person
                           0
                         end
   end
+
+  public
+
+  sig { void }
+  def resume
+    msg = "My name is #{@name['Name']}, i'm #{@age['Age']}, i work as a freelancer #{@role['Role']} and i earn around #{@salary['Salary']}€ per job." # rubocop:disable Layout/LineLength
+    puts(msg)
+  end
 end
 
-dev = Person.new('Juan', 25, 1, 'Compiler Developer')
+dev = Profession.new('Juan', 25, 1, 'Compiler Developer')
 
 puts(dev.salary)
+dev.resume
